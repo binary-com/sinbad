@@ -1,25 +1,23 @@
 import * as React from 'react'
-import { Helmet } from 'react-helmet'
 import type { PageProps } from 'gatsby'
 import Description from '../pages/job-description/description'
 import JobTitle from '../pages/job-description/job-title'
 import BenefitsList from '../pages/job-description/benefits'
-import Positions from 'data/positions.json'
+import { positions } from 'pages/job-description/data'
+import SEO from 'components/containers/seo'
 import Layout from 'components/layout/layout'
 import { JoinUs } from 'pages/home'
 
 const JobDescription = (props: PageProps) => {
-    const position = Positions?.find(({ id }) => id === props.pageContext.slug)
+    const position = positions?.find(({ id }) => id === props.pageContext.slug)
 
     return (
         <Layout>
-            <Helmet>
-                <title>Sinbad | {position?.position}</title>
-            </Helmet>
+            <SEO title={position?.seo_title} description={position?.seo_description} />
             <JobTitle position={position} />
             <Description position={position} />
             <BenefitsList />
-            <JoinUs appearance="job" />
+            <JoinUs appearance="job" position={position} />
         </Layout>
     )
 }

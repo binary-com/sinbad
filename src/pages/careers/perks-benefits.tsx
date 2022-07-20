@@ -90,7 +90,7 @@ const StyledText = styled.div<StyledTextProps>`
     }
 `
 
-const StyledHeader = styled.div<StyledTextProps>`
+const StyledHeader = styled.h2<StyledTextProps>`
     width: 100%;
     font-size: 4.8rem;
     line-height: 53px;
@@ -180,7 +180,7 @@ const PerksBenefits = () => {
                 <StyledImage>
                     <StaticImage
                         src={`../../images/common/careers/sinbad-near-p&b.png`}
-                        alt="sinbad mascott"
+                        alt="Perks and benefits of working in Sinbad Software"
                         placeholder="tracedSVG"
                     />
                 </StyledImage>

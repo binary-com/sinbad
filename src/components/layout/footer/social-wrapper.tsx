@@ -50,6 +50,7 @@ const contacts = [
     {
         id: 0,
         image: MapSvg,
+        alt: 'Map',
         info: 'Sinbad Software LLC',
         details:
             '2201, 22nd Floor, One by Omniyat Building, Al Mustaqbal Street, Business Bay, Dubai, UAE',
@@ -61,6 +62,7 @@ const contacts = [
         id: 1,
         image: PhoneSvg,
         info: 'Phone:',
+        alt: 'Mobile',
         details: '+971 50 861-1678',
         to: `tel:${MOBILE}`,
         target: '_self',
@@ -69,6 +71,7 @@ const contacts = [
     {
         id: 2,
         image: EmailSvg,
+        alt: 'Email',
         info: 'Email:',
         details: `${EMAIL}`,
         to: `mailto:${EMAIL}`,
@@ -80,7 +83,7 @@ const contacts = [
 const SocialWrapperComponent = () => {
     return (
         <SocialWrapper>
-            {contacts.map(({ id, image, info, details, to, target, only_mobile }) => (
+            {contacts.map(({ id, image, alt, info, details, to, target, only_mobile }) => (
                 <ContactContainer
                     key={id}
                     cursor={only_mobile ? 'unset' : 'pointer'}
@@ -94,7 +97,7 @@ const SocialWrapperComponent = () => {
                     }}
                 >
                     <ContactIcon>
-                        <ContactImage src={image} />
+                        <ContactImage src={image} alt={alt} />
                     </ContactIcon>
                     <div>
                         <ContactText>{info}</ContactText>
