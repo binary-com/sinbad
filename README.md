@@ -1,3 +1,12 @@
+<h1 align="center">Repository Relocation Notice</h1>
+
+This repository has been relocated to the [deriv-com](https://github.com/deriv-com) organization. Please access it at the following URL: [sinbad](https://github.com/deriv-com/sinbad)
+
+Thank you!
+
+---
+
+
 <h1>
  Sinbad.dev
 </h1>
